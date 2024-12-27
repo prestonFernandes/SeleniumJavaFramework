@@ -11,7 +11,6 @@ public class ShopProductPage {
 	By quantityIncrease=By.cssSelector("button i.touchspin-up");
 	By quantityDecrease=By.cssSelector("button i.touchspin-down");
 	By addToCartButton=By.xpath("//button[@data-button-action='add-to-cart']");
-	By continueShoppingButton=By.xpath("//button[.='Continue shopping']");//Context Item Expression .=
 	By homeLink=By.xpath("//span[.='Home']");
 	
 	public ShopProductPage(WebDriver driver) {
@@ -32,10 +31,6 @@ public class ShopProductPage {
 	
 	public WebElement getAddToCartButton() {
 		return driver.findElement(addToCartButton);
-	}
-	
-	public WebElement getContinueShoppingButton() {
-		return driver.findElement(continueShoppingButton);
 	}
 	
 	public WebElement getHomeLink() {
