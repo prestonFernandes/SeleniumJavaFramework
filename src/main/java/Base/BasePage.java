@@ -21,7 +21,6 @@ public class BasePage {
 	public WebDriver driver;
 	private String url;
 	private Properties props;
-	public WebDriverWait wait;
 	
 	public BasePage() throws IOException {
 		props=new Properties();
@@ -47,7 +46,7 @@ public class BasePage {
 	}
 	
 	public String getUrl() {
-		return props.getProperty(url);
+		return props.getProperty("url");
 	}
 	
 	public void takeScreenshot(WebDriver driver) throws IOException {
