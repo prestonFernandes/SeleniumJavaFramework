@@ -29,6 +29,9 @@ public class HomePage {
 	By tables=By.linkText("TABLES");
 	By testStore=By.linkText("TEST STORE");
 	By aboutMe=By.linkText("ABOUT ME");
+	By cookie = By.cssSelector(".close-cookie-warning > span");
+
+
 	
 	public HomePage(WebDriver driver) {
 		this.driver=driver;
@@ -120,5 +123,9 @@ public class HomePage {
 	
 	public WebElement getAboutMe() {
 		return driver.findElement(aboutMe);
+	}
+	
+	public WebElement getCookie() {
+		return driver.findElement(cookie);
 	}
 }
