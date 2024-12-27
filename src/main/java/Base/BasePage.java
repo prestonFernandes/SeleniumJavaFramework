@@ -47,7 +47,7 @@ public class BasePage {
 	}
 	
 	public String getUrl() {
-		return props.getProperty(url);
+		return props.getProperty("url");
 	}
 	
 	public void takeScreenshot(WebDriver driver) throws IOException {
