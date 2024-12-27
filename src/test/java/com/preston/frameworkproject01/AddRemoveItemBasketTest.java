@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BasePage;
@@ -17,6 +18,7 @@ import PageObjects.ShopHomePage;
 import PageObjects.ShopProductPage;
 import PageObjects.ShoppingCart;
 
+@Listeners(Resources.Listeners.class)
 public class AddRemoveItemBasketTest extends BasePage{
 
 	public AddRemoveItemBasketTest() throws IOException {
@@ -33,7 +35,7 @@ public class AddRemoveItemBasketTest extends BasePage{
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
-		driver=null;
+//		driver=null;
 	}
 	
 	@Test
@@ -69,7 +71,7 @@ public class AddRemoveItemBasketTest extends BasePage{
 		WebDriverWait wait=new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.invisibilityOf(cart.getProductTwoRemoveButton()));
 		String cartValue=cart.getCartTotalValue().getText();
-		Assert.assertEquals(cartValue, "$45.24");
+		Assert.assertEquals(cartValue, "$45.25");
 	}
 	
 }

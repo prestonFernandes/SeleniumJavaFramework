@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BasePage;
@@ -18,6 +19,7 @@ import PageObjects.ShopHomePage;
 import PageObjects.ShopProductPage;
 import PageObjects.ShoppingCart;
 
+@Listeners(Resources.Listeners.class)
 public class OrderCompleteTest extends BasePage{
 
 	public OrderCompleteTest() throws IOException {
@@ -34,7 +36,7 @@ public class OrderCompleteTest extends BasePage{
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
-		driver=null;
+//		driver=null;
 	}
 	
 	@Test

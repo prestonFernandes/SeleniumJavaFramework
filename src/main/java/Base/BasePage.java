@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	public WebDriver driver;
+	public static WebDriver driver;
 	private String url;
 	private Properties props;
 	public WebDriverWait wait;
@@ -53,6 +53,7 @@ public class BasePage {
 	public void takeScreenshot(WebDriver driver) throws IOException {
 		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File destFile=new File(System.getProperty("user.dir")+"\\target\\Screenshots\\"+getTimeStamp()+".png");
+		System.out.println(System.getProperty("user.dir")+"\\target\\Screenshots\\"+getTimeStamp()+".png");
 		FileUtils.copyFile(srcFile, destFile);
 	}
 	
