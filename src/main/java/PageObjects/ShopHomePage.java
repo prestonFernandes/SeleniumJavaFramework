@@ -1,10 +1,14 @@
 package PageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ShopHomePage {
+import Base.BasePage;
+
+public class ShopHomePage extends BasePage {
 	public WebDriver driver;
 	
 	//humming bird t-shirt
@@ -24,39 +28,47 @@ public class ShopHomePage {
 	//cup3
 	By productEight=By.xpath("//img[@alt='Mug Today is a good day']");
 	
-	public ShopHomePage(WebDriver driver) {
-		this.driver=driver;
+	public ShopHomePage( ) throws IOException {
+		super();
 	}
 	
 	public WebElement getProductOne() {
+		this.driver=getDriver();
 		return driver.findElement(productOne);
 	}
 	
 	public WebElement getProductTwo() {
+		this.driver=getDriver();
 		return driver.findElement(productTwo);
 	}
 	
 	public WebElement getProductThree() {
+		this.driver=getDriver();
 		return driver.findElement(productThree);
 	}
 	
 	public WebElement getProductFour() {
+		this.driver=getDriver();
 		return driver.findElement(productFour);
 	}
 	
 	public WebElement getProductFive() {
+		this.driver=getDriver();
 		return driver.findElement(productFive);
 	}
 	
 	public WebElement getProductSix() {
+		this.driver=getDriver();
 		return driver.findElement(productSix);
 	}
 	
 	public WebElement getProductSeven() {
+		this.driver=getDriver();
 		return driver.findElement(productSeven);
 	}
 	
 	public WebElement getProductEight() {
+		this.driver=getDriver();
 		return driver.findElement(productEight);
 	}
 }
