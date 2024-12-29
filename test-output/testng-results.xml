@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-29T12:00:59 IST" name="Suite" finished-at="2024-12-29T12:02:02 IST" duration-ms="62749">
+  <suite started-at="2024-12-29T16:49:51 IST" name="Suite" finished-at="2024-12-29T16:50:36 IST" duration-ms="44057">
     <groups>
     </groups>
-    <test started-at="2024-12-29T12:00:59 IST" name="Test1" finished-at="2024-12-29T12:01:20 IST" duration-ms="20524">
+    <test started-at="2024-12-29T16:49:51 IST" name="Test1" finished-at="2024-12-29T16:50:14 IST" duration-ms="22881">
       <class name="com.preston.frameworkproject01.AddRemoveItemBasketTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@212b5695]" started-at="2024-12-29T12:00:59 IST" name="setup" finished-at="2024-12-29T12:01:02 IST" duration-ms="2873" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:49:51 IST" name="setup" finished-at="2024-12-29T16:49:55 IST" duration-ms="3653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addRemoveItem()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@212b5695]" started-at="2024-12-29T12:01:02 IST" name="addRemoveItem" finished-at="2024-12-29T12:01:19 IST" duration-ms="17412" status="PASS">
+        <test-method signature="addRemoveItem()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:49:55 IST" name="addRemoveItem" finished-at="2024-12-29T16:50:14 IST" duration-ms="18999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addRemoveItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@212b5695]" started-at="2024-12-29T12:01:19 IST" name="tearDown" finished-at="2024-12-29T12:01:20 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:50:14 IST" name="tearDown" finished-at="2024-12-29T16:50:14 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.preston.frameworkproject01.AddRemoveItemBasketTest -->
     </test> <!-- Test1 -->
-    <test started-at="2024-12-29T12:01:20 IST" name="Test2" finished-at="2024-12-29T12:02:02 IST" duration-ms="42192">
+    <test started-at="2024-12-29T16:49:51 IST" name="Test2" finished-at="2024-12-29T16:50:36 IST" duration-ms="44057">
       <class name="com.preston.frameworkproject01.OrderCompleteTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@6283d8b8]" started-at="2024-12-29T12:01:20 IST" name="setup" finished-at="2024-12-29T12:01:22 IST" duration-ms="2481" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:49:51 IST" name="setup" finished-at="2024-12-29T16:49:55 IST" duration-ms="3178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="endToendTest()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@6283d8b8]" started-at="2024-12-29T12:01:22 IST" name="endToendTest" finished-at="2024-12-29T12:02:02 IST" duration-ms="39506" status="PASS">
+        <test-method signature="endToendTest()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:49:55 IST" name="endToendTest" finished-at="2024-12-29T16:50:35 IST" duration-ms="40623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endToendTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@6283d8b8]" started-at="2024-12-29T12:02:02 IST" name="tearDown" finished-at="2024-12-29T12:02:02 IST" duration-ms="202" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:50:35 IST" name="tearDown" finished-at="2024-12-29T16:50:36 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
