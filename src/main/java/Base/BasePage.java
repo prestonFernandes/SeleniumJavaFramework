@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	public static WebDriver driver;
+
 	private String url;
 	private Properties props;
 	public WebDriverWait wait;
@@ -29,31 +29,18 @@ public class BasePage {
 		props.load(data);
 	}
 	
-	public WebDriver getDriver() {
-		if(props.getProperty("browser").equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Drivers\\chromedriver.exe");
-			driver=new ChromeDriver();
-		}else if(props.getProperty("browser").equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Drivers\\msedgedriver.exe");
-			driver=new EdgeDriver();
-		}else {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Drivers\\geckodriver.exe");
-			driver=new FirefoxDriver();
-		}
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		return driver;
+	public WebDriver getDriver() {		
+		return WebDriverInstance.getDriver();
 	}
 	
 	public String getUrl() {
 		return props.getProperty("url");
 	}
 	
-	public void takeScreenshot(WebDriver driver) throws IOException {
-		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	public void takeScreenshot(String name) throws IOException {
+		File srcFile=((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
 		File destFile=new File(System.getProperty("user.dir")+"\\target\\Screenshots\\"+getTimeStamp()+".png");
-		System.out.println(System.getProperty("user.dir")+"\\target\\Screenshots\\"+getTimeStamp()+".png");
+		System.out.println(System.getProperty("user.dir")+"\\target\\Screenshots\\"+name+getTimeStamp()+".png");
 		FileUtils.copyFile(srcFile, destFile);
 	}
 	

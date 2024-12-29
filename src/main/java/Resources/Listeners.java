@@ -17,7 +17,7 @@ public class Listeners extends BasePage implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Failed TC");
 	    try {
-	    	takeScreenshot(driver);
+	    	takeScreenshot(result.getName());
 	    }catch(Exception e) {
 	    	e.printStackTrace();
 	    }

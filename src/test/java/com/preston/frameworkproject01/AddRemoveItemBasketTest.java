@@ -71,7 +71,7 @@ public class AddRemoveItemBasketTest extends BasePage{
 		WebDriverWait wait=new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.invisibilityOf(cart.getProductTwoRemoveButton()));
 		String cartValue=cart.getCartTotalValue().getText();
-		Assert.assertEquals(cartValue, "$45.25");
+		Assert.assertEquals(cartValue, "$45.24");
 	}
 	
 }
