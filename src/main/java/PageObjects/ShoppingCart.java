@@ -19,7 +19,7 @@ public class ShoppingCart extends BasePage {
 	By productTwoRemoveButton=By.cssSelector("li.cart-item:nth-child(2) a.remove-from-cart");
 	By cartTotalValue=By.cssSelector(".cart-total span.value");
 	
-	public ShoppingCart(WebDriver driver) throws IOException {
+	public ShoppingCart() throws IOException {
 		super();
 	}
 	

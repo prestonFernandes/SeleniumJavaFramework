@@ -12,6 +12,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BasePage;
+import Base.Hooks;
 import PageObjects.CartPanelPage;
 import PageObjects.HomePage;
 import PageObjects.ShopHomePage;
@@ -19,42 +20,32 @@ import PageObjects.ShopProductPage;
 import PageObjects.ShoppingCart;
 
 @Listeners(Resources.Listeners.class)
-public class AddRemoveItemBasketTest extends BasePage{
+public class AddRemoveItemBasketTest extends Hooks{
 
 	public AddRemoveItemBasketTest() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	@BeforeTest
-	public void setup() {
-		driver=getDriver();
-		driver.get(getUrl());
-	}
-	
-	@AfterTest
-	public void tearDown() {
-		driver.quit();
-//		driver=null;
-	}
+
 	
 	@Test
-	public void addRemoveItem() throws InterruptedException{
-		HomePage home=new HomePage(driver);
+	public void addRemoveItem() throws InterruptedException, IOException{
+		HomePage home=new HomePage();
 		home.getCookie().click();
 		home.getTestStore().click();
 		
-		ShopHomePage shopHome=new ShopHomePage(driver);
+		ShopHomePage shopHome=new ShopHomePage();
 		shopHome.getProductOne().click();
 		
-		ShopProductPage shopProd=new ShopProductPage(driver);
+		ShopProductPage shopProd=new ShopProductPage();
 		Select sizeOptions=new Select(shopProd.getSizeSelectOption());
 		sizeOptions.selectByVisibleText("M");
 		Thread.sleep(5000);//If we immediately switch quantity after updating size, since the value on FE is not updated the count does not update
 		shopProd.getQuantityIncreaseBtn().click();
 		shopProd.getAddToCartButton().click();
 		
-		CartPanelPage cartPanel=new CartPanelPage(driver);
+		CartPanelPage cartPanel=new CartPanelPage();
 		cartPanel.getContinueShoppingButton().click();
 		
 		shopProd.getHomeLink().click();
@@ -65,11 +56,11 @@ public class AddRemoveItemBasketTest extends BasePage{
 		
 		cartPanel.getProceedToCheckoutButton().click();
 		
-		ShoppingCart cart=new ShoppingCart(driver);
+		ShoppingCart cart=new ShoppingCart();
 		cart.getProductTwoRemoveButton().click();
 		
-		WebDriverWait wait=new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.invisibilityOf(cart.getProductTwoRemoveButton()));
+		waitForInvisibilityOfElement(cart.getProductTwoRemoveButton(),10);
+		
 		String cartValue=cart.getCartTotalValue().getText();
 		Assert.assertEquals(cartValue, "$45.24");
 	}

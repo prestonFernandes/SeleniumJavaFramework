@@ -12,9 +12,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -29,7 +31,7 @@ public class BasePage {
 		props.load(data);
 	}
 	
-	public WebDriver getDriver() {		
+	public static WebDriver getDriver() {		
 		return WebDriverInstance.getDriver();
 	}
 	
@@ -46,6 +48,11 @@ public class BasePage {
 	
 	public String getTimeStamp() {
 		return new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
+	}
+	
+	public static void waitForInvisibilityOfElement(WebElement element,int timer) {
+		WebDriverWait wait=new WebDriverWait(getDriver(),timer);
+		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 
 }

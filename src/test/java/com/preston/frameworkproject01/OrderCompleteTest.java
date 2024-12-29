@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BasePage;
+import Base.Hooks;
 import PageObjects.CartPanelPage;
 import PageObjects.HomePage;
 import PageObjects.OrderFormAddress;
@@ -20,45 +21,34 @@ import PageObjects.ShopProductPage;
 import PageObjects.ShoppingCart;
 
 @Listeners(Resources.Listeners.class)
-public class OrderCompleteTest extends BasePage{
+public class OrderCompleteTest extends Hooks{
 
 	public OrderCompleteTest() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	@BeforeTest
-	public void setup() {
-		driver=getDriver();
-		driver.get(getUrl());
-	}
-	
-	@AfterTest
-	public void tearDown() {
-		driver.quit();
-//		driver=null;
-	}
 	
 	@Test
-	public void endToendTest() throws InterruptedException {
-		HomePage home=new HomePage(driver);
+	public void endToendTest() throws InterruptedException, IOException {
+		HomePage home=new HomePage();
 		home.getCookie().click();
 		home.getTestStore().click();
 		
-		ShopHomePage shopHome=new ShopHomePage(driver);
+		ShopHomePage shopHome=new ShopHomePage();
 		shopHome.getProductOne().click();
 		
-		ShopProductPage shopProd=new ShopProductPage(driver);
+		ShopProductPage shopProd=new ShopProductPage();
 		Select sizeOptions=new Select(shopProd.getSizeSelectOption());
 		sizeOptions.selectByVisibleText("M");
 		Thread.sleep(5000);//If we immediately switch quantity after updating size, since the value on FE is not updated the count does not update
 		shopProd.getQuantityIncreaseBtn().click();
 		shopProd.getAddToCartButton().click();
 		
-		CartPanelPage cartPanel=new CartPanelPage(driver);
+		CartPanelPage cartPanel=new CartPanelPage();
 		cartPanel.getProceedToCheckoutButton().click();
 		
-		ShoppingCart cart=new ShoppingCart(driver);
+		ShoppingCart cart=new ShoppingCart();
 		cart.getHaveAPromoCodeLink().click();
 		cart.getPromoCodeInput().sendKeys("20OFF");
 		cart.getPromoCodeAddBtn().click();
@@ -66,7 +56,7 @@ public class OrderCompleteTest extends BasePage{
 		Thread.sleep(5000);
 		cart.getProceedToCheckoutButton().click();
 		
-		OrderFormPersonalInformation personalInfo=new OrderFormPersonalInformation(driver);
+		OrderFormPersonalInformation personalInfo=new OrderFormPersonalInformation();
 		personalInfo.getMrsRadioButton().click();
 		personalInfo.getMrRadioButton().click();
 		
@@ -76,7 +66,7 @@ public class OrderCompleteTest extends BasePage{
 		personalInfo.getTermsAndConditionsCheckbox().click();
 		personalInfo.getContinueButton().click();
 		
-		OrderFormAddress orderAddress=new OrderFormAddress(driver);
+		OrderFormAddress orderAddress=new OrderFormAddress();
 		orderAddress.getAddressField().sendKeys("212 Beverly Hills");
 		orderAddress.getCityField().sendKeys("Boulevard");
 		Select state=new Select(orderAddress.getStateSelectionField());
@@ -86,11 +76,11 @@ public class OrderCompleteTest extends BasePage{
 		orderAddress.getContinueButton().click();
 		Thread.sleep(3000);
 		
-		OrderFormShippingInfo orderShip=new OrderFormShippingInfo(driver);
+		OrderFormShippingInfo orderShip=new OrderFormShippingInfo();
 		orderShip.getCommentField().sendKeys("Please handled with care");
 		orderShip.getContinueButton().click();
 		
-		OrderFormPaymentInfo paymentInfo=new OrderFormPaymentInfo(driver);
+		OrderFormPaymentInfo paymentInfo=new OrderFormPaymentInfo();
 		paymentInfo.getPayByChequeRadioButton().click();
 		paymentInfo.getTermsOfServiceCheckbox().click();
 		paymentInfo.getPlaceOrderButton().click();
