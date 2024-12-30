@@ -27,6 +27,8 @@ public class ShopHomePage extends BasePage {
 	By productSeven=By.xpath("//img[@alt='Mug The adventure begins']");
 	//cup3
 	By productEight=By.xpath("//img[@alt='Mug Today is a good day']");
+	//Sign in Button
+	By signInButton=By.xpath("//a//span[.='Sign in']");
 	
 	public ShopHomePage( ) throws IOException {
 		super();
@@ -70,5 +72,10 @@ public class ShopHomePage extends BasePage {
 	public WebElement getProductEight() {
 		this.driver=getDriver();
 		return driver.findElement(productEight);
+	}
+	
+	public WebElement getSignInButton() {
+		this.driver=getDriver();
+		return driver.findElement(signInButton);
 	}
 }

@@ -25,12 +25,10 @@ public class WebDriverInstance {
 	}
 	
 	public static WebDriver createDriver() throws IOException {
-		WebDriver driver=null;
-		
+		WebDriver driver=null;	
 		Properties props=new Properties();
 		FileInputStream data=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\config.properties");
-		props.load(data);
-		
+		props.load(data);	
 		if(props.getProperty("browser").equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
@@ -40,8 +38,7 @@ public class WebDriverInstance {
 		}else {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Drivers\\geckodriver.exe");
 			driver=new FirefoxDriver();
-		}
-		
+		}	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
