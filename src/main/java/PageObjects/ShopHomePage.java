@@ -30,6 +30,10 @@ public class ShopHomePage extends BasePage {
 	//Sign in Button
 	By signInButton=By.xpath("//a//span[.='Sign in']");
 	
+	By myAccount=By.cssSelector("a.account");
+	
+	By signOutButton=By.cssSelector("a.logout");
+	
 	public ShopHomePage( ) throws IOException {
 		super();
 	}
@@ -77,5 +81,15 @@ public class ShopHomePage extends BasePage {
 	public WebElement getSignInButton() {
 		this.driver=getDriver();
 		return driver.findElement(signInButton);
+	}
+	
+	public WebElement getMyAccountLink() {
+		this.driver=getDriver();
+		return driver.findElement(myAccount);
+	}
+	
+	public WebElement getSignOutButton() {
+		this.driver=getDriver();
+		return driver.findElement(signOutButton);
 	}
 }

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.preston.frameworkproject01.AddRemoveItemBasketTest">
+      <class name="com.preston.frameworkproject01.ShopLoginTest">
         <methods>
-          <include name="setup"/>
           <include name="addRemoveItem"/>
+          <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.preston.frameworkproject01.AddRemoveItemBasketTest -->
+      </class> <!-- com.preston.frameworkproject01.ShopLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

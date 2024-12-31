@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-29T16:49:51 IST" name="Suite" finished-at="2024-12-29T16:50:36 IST" duration-ms="44057">
+  <suite started-at="2024-12-30T15:00:56 IST" name="Default suite" finished-at="2024-12-30T15:01:36 IST" duration-ms="39943">
     <groups>
     </groups>
-    <test started-at="2024-12-29T16:49:51 IST" name="Test1" finished-at="2024-12-29T16:50:14 IST" duration-ms="22881">
-      <class name="com.preston.frameworkproject01.AddRemoveItemBasketTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:49:51 IST" name="setup" finished-at="2024-12-29T16:49:55 IST" duration-ms="3653" status="PASS">
+    <test started-at="2024-12-30T15:00:56 IST" name="Default test" finished-at="2024-12-30T15:01:36 IST" duration-ms="39943">
+      <class name="com.preston.frameworkproject01.ShopLoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.ShopLoginTest@429bffaa]" started-at="2024-12-30T15:00:56 IST" name="setup" finished-at="2024-12-30T15:00:59 IST" duration-ms="2956" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addRemoveItem()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:49:55 IST" name="addRemoveItem" finished-at="2024-12-29T16:50:14 IST" duration-ms="18999" status="PASS">
+        <test-method signature="addRemoveItem()[pri:0, instance:com.preston.frameworkproject01.ShopLoginTest@429bffaa]" started-at="2024-12-30T15:00:59 IST" name="addRemoveItem" finished-at="2024-12-30T15:01:36 IST" duration-ms="36795" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addRemoveItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.AddRemoveItemBasketTest@15aab8c6]" started-at="2024-12-29T16:50:14 IST" name="tearDown" finished-at="2024-12-29T16:50:14 IST" duration-ms="211" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.ShopLoginTest@429bffaa]" started-at="2024-12-30T15:01:36 IST" name="tearDown" finished-at="2024-12-30T15:01:36 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.preston.frameworkproject01.AddRemoveItemBasketTest -->
-    </test> <!-- Test1 -->
-    <test started-at="2024-12-29T16:49:51 IST" name="Test2" finished-at="2024-12-29T16:50:36 IST" duration-ms="44057">
-      <class name="com.preston.frameworkproject01.OrderCompleteTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:49:51 IST" name="setup" finished-at="2024-12-29T16:49:55 IST" duration-ms="3178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="endToendTest()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:49:55 IST" name="endToendTest" finished-at="2024-12-29T16:50:35 IST" duration-ms="40623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endToendTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.preston.frameworkproject01.OrderCompleteTest@2f217633]" started-at="2024-12-29T16:50:35 IST" name="tearDown" finished-at="2024-12-29T16:50:36 IST" duration-ms="234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.preston.frameworkproject01.OrderCompleteTest -->
-    </test> <!-- Test2 -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.preston.frameworkproject01.ShopLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

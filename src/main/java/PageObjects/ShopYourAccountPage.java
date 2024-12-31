@@ -13,6 +13,7 @@ public class ShopYourAccountPage extends BasePage{
 	
 	By pageHeading=By.cssSelector("header h1");
 	By signOutButton=By.cssSelector("a.logout");
+	By homeLink=By.xpath("//a//span[.='Home']");
 	
 	
 	
@@ -29,6 +30,11 @@ public class ShopYourAccountPage extends BasePage{
 	public WebElement getSignOutButton() {
 		this.driver=getDriver();
 		return driver.findElement(signOutButton);
+	}
+	
+	public WebElement getHomeLink() {
+		this.driver=getDriver();
+		return driver.findElement(homeLink);
 	}
 	
 }
